@@ -11,6 +11,17 @@ import (
 // Routes list of route
 type Routes []model.Route
 
+
+type Middleware func(http.HandlerFunc) http.HandlerFunc
+
+
+func Chain(f http.HandlerFunc, middlewares ...Middleware) http.HandlerFunc {
+	for _, m := range middlewares {
+		f = m(f)
+	}
+	return f
+}
+
 //LoadRouter : load all routes defined in routes.go
 func LoadRouter(config *model.AppSetting) *mux.Router {
 	
@@ -23,6 +34,8 @@ func LoadRouter(config *model.AppSetting) *mux.Router {
 		if route.Protected {
 			//Todo: chain the middle ware
 			handler = middleware.PanicRecoveryMiddleware((middleware.TokenMiddleware(route.HandlerFunc)))
+
+			//Chain(route.HandlerFunc,middleware.TokenMiddleware,middleware.PanicRecoveryMiddleware)
 		}else{
 			handler = middleware.PanicRecoveryMiddleware(route.HandlerFunc)
 		}

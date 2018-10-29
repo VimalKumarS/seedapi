@@ -1,10 +1,12 @@
 package model
 
 import (
+	"fmt"
 	"log"
 	"net/http"
-	"github.com/gorilla/mux"
+
 	"github.com/gorilla/handlers"
+	"github.com/gorilla/mux"
 )
 
 // Server : struct
@@ -23,8 +25,13 @@ func CreateServer(config *AppSetting) *Server {
 func (s *Server) Run(router *mux.Router) {
 
 	//enabling cors if requried
-	allowedOrigins := handlers.AllowedOrigins([]string{"*"})
-	allowedMethods := handlers.AllowedMethods([]string{"GET", "POST", "DELETE", "PUT"})
-
-	log.Fatal(http.ListenAndServe(":"+s.config.Port, handlers.CORS(allowedOrigins, allowedMethods)(router)))
+	if s.config.EnableCors {
+		allowedOrigins := handlers.AllowedOrigins([]string{"*"})
+		allowedMethods := handlers.AllowedMethods([]string{"GET", "POST", "DELETE", "PUT"})
+		fmt.Println("Server running on port:" + s.config.Port)
+		log.Fatal(http.ListenAndServe(":"+s.config.Port, handlers.CORS(allowedOrigins, allowedMethods)(router)))
+	}else{
+		fmt.Println("Server running on port:" + s.config.Port)
+		log.Fatal(http.ListenAndServe(":"+s.config.Port, router))
+	}
 }

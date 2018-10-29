@@ -1,5 +1,6 @@
 {
     "port":"8000",
     "env":"dev",
-    "dbConnection":"connection string"
+    "dbConnection":"connection string",
+    "enablecors":false
 }

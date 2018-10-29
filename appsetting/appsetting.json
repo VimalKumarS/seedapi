@@ -1,5 +1,6 @@
 {
     "port":"8000",
     "env":"",
-    "dbConnection":"connection string"
+    "dbConnection":"connection string",
+    "enablecors":true
 }
