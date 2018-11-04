@@ -1,0 +1,30 @@
+{"level":"error","ts":1541366350.9518218,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"info","ts":1541366456.768783,"msg":"Stopping the http server"}
+{"level":"error","ts":1541366596.8618371,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541366602.5085473,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541366603.1335778,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368339.9275956,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368340.2369545,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368340.72319,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368360.9236953,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368361.067424,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368361.2195866,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368361.354386,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368361.5299957,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"info","ts":1541368384.0345204,"msg":"Stopping the http server"}
+{"level":"error","ts":1541368428.8375344,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368428.990841,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368429.1451259,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368429.2758975,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"info","ts":1541368443.3161805,"msg":"Stopping the http server"}
+{"level":"error","ts":1541368491.5877821,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368491.74702,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368491.900767,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368492.134555,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368492.317491,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368492.4719012,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"error","ts":1541368492.5796683,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"info","ts":1541368638.8979015,"msg":"Stopping the http server"}
+{"level":"error","ts":1541369395.7061338,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created"}
+{"level":"info","ts":1541371171.1975563,"msg":"Stopping the http server"}
+{"level":"error","ts":1541372197.0582957,"msg":"Error","id1":"wrong id format, should be an integer","Error":"Custom error or validation error: New error created","stacktrace":"New error created\nCustom error or validation error\nseedapi/util.ErrorType.Wrapf\n\tC:/Dexter/Practice/goCoursera/SeedApi/util/errors.go:54\nseedapi/controller.(*SearchController).CustomError\n\tC:/Dexter/Practice/goCoursera/SeedApi/controller/searchcontroller.go:45\nseedapi/controller.(*SearchController).CustomError-fm\n\tC:/Dexter/Practice/goCoursera/SeedApi/route/searchroutes.go:38\nseedapi/middleware.ErrorHandlerMiddleware.func1\n\tC:/Dexter/Practice/goCoursera/SeedApi/middleware/errorhandler.go:15\nnet/http.HandlerFunc.ServeHTTP\n\tC:/Go/src/net/http/server.go:1964\nseedapi/middleware.PanicRecoveryMiddleware.func1\n\tC:/Dexter/Practice/goCoursera/SeedApi/middleware/panicrecovery.go:21\nnet/http.HandlerFunc.ServeHTTP\n\tC:/Go/src/net/http/server.go:1964\ngithub.com/gorilla/mux.(*Router).ServeHTTP\n\tC:/Users/vimal/go/pkg/mod/github.com/gorilla/mux@v1.6.2/mux.go:162\ngithub.com/gorilla/handlers.(*cors).ServeHTTP\n\tC:/Users/vimal/go/pkg/mod/github.com/gorilla/handlers@v1.4.0/cors.go:52\nnet/http.serverHandler.ServeHTTP\n\tC:/Go/src/net/http/server.go:2741\nnet/http.(*conn).serve\n\tC:/Go/src/net/http/server.go:1847\nruntime.goexit\n\tC:/Go/src/runtime/asm_amd64.s:1333"}

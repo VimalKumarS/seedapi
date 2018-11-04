@@ -3,17 +3,20 @@ package service
 import (
 	"seedapi/model"
 	"time"
+	"go.uber.org/zap"
 )
 
 // SearchMapperSQL  define a config contain SQL mapper connection string
 type SearchMapperSQL struct {
 	config *model.AppSetting
+	logger *zap.Logger
 }
 
 // SearchServiceInstance instance
-func SearchServiceInstance(config *model.AppSetting) *SearchMapperSQL {
+func SearchServiceInstance(config *model.AppSetting, Logger *zap.Logger) *SearchMapperSQL {
 	return &SearchMapperSQL{
 		config: config,
+		logger:Logger,
 	}
 }
 

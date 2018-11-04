@@ -5,14 +5,14 @@ import (
 	"net/http"
 )
 
-// ErrorRes: struct
+// ErrorRes : struct
 type ErrorRes struct {
-	Error   bool   `json:"error"`
-	Message string `json:"message"`
+	Error   bool        `json:"error"`
+	Message interface{} `json:"message"`
 }
 
-// ErrorResponse: http error response
-func ErrorResponse(w http.ResponseWriter, statusCode int, response string) {
+// ErrorResponse : http error response
+func ErrorResponse(w http.ResponseWriter, statusCode int, response interface{}) {
 	error := ErrorRes{
 		true,
 		response,

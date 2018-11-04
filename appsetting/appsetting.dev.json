@@ -1,6 +1,10 @@
 {
-    "port":"8000",
+    "port":"0.0.0.0:8000",
     "env":"dev",
     "dbConnection":"connection string",
-    "enablecors":false
+    "enablecors":true,
+    "logging":{
+        "filepath":".\\api-log\\api.log",
+        "maxSize": 20
+    }
 }
