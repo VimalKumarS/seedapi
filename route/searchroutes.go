@@ -4,14 +4,13 @@ import (
 	"seedapi/model"
 	"seedapi/service"
 	"seedapi/controller"
-	"go.uber.org/zap"
 )
 
 // SearchRoutes : list of all routes
-func SearchRoutes(config *model.AppSetting,  Logger *zap.Logger) Routes {
+func SearchRoutes(config *model.AppSetting) Routes {
 	
 	//Configure service 
-	searchService := service.SearchServiceInstance(config, Logger)
+	searchService := service.SearchServiceInstance(config)
 	//Configure controller
 	searchController := controller.SearchControllerInstance(searchService)
 

@@ -36,7 +36,7 @@ func main() {
 	defer util.Logger.Sync()
 
 	//fmt.Println(appsetting.Port)
-	router := route.LoadRouter(appsetting, util.Logger)
+	router := route.LoadRouter(appsetting)
 
 	server := model.CreateServer(appsetting, util.Logger)
 	server.Run(router)

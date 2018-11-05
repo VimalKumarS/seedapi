@@ -41,6 +41,7 @@ func (s *Server) Run(router *mux.Router) {
 		
 	}else{
 		fmt.Println("Server running on port:" + s.config.Port)
+		s.Logger.Info("Server running on port:" + s.config.Port)
 		//log.Fatal(http.ListenAndServe(":"+s.config.Port, router))
 		s.Server.Handler = router
 	}

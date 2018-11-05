@@ -6,7 +6,7 @@ import (
 	"github.com/gorilla/mux"
 	"seedapi/middleware"
 	"seedapi/model"
-	"go.uber.org/zap"
+	
 )
 
 // Routes list of route
@@ -29,10 +29,10 @@ func chain(f http.HandlerFunc, middlewares ...Middleware) http.HandlerFunc {
 }
 
 //LoadRouter : load all routes defined in routes.go
-func LoadRouter(config *model.AppSetting, Logger *zap.Logger) *mux.Router {
+func LoadRouter(config *model.AppSetting) *mux.Router {
 	
 	router := mux.NewRouter().StrictSlash(true)
-	for _, route := range bundleRoute(config,Logger) {
+	for _, route := range bundleRoute(config) {
 		var handler http.Handler
 
 		//handler = route.HandlerFunc
@@ -58,7 +58,7 @@ func LoadRouter(config *model.AppSetting, Logger *zap.Logger) *mux.Router {
 }
 
 
-func bundleRoute(config *model.AppSetting, Logger *zap.Logger) Routes{
+func bundleRoute(config *model.AppSetting) Routes{
 
 	route := []model.Route{
 		{
@@ -70,7 +70,7 @@ func bundleRoute(config *model.AppSetting, Logger *zap.Logger) Routes{
 		},
 	}
 	route = append(route, 
-		(SearchRoutes(config, Logger))...)  // append all route
+		(SearchRoutes(config))...)  // append all route
 	
 	return route
 }
