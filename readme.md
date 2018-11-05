@@ -105,4 +105,5 @@ Sample error log with stack trace
 
 ### Todos
  - Go Docs / Go swagger
-- 
+- Content negotiation
+
