@@ -3,6 +3,7 @@ package service
 import (
 	"seedapi/model"
 	"seedapi/util"
+	repo "seedapi/repository"
 	"time"
 )
 
@@ -23,6 +24,7 @@ func (m *SearchMapperSQL) GetAll() ([]model.Search, error) {
 	var search []model.Search
 	// Todo: do some db operation
 	//m.config.Connection
+	repo.Data.QueryRow(`SELECT id, email, firstname, lastname FROM public.user WHERE email = $1   AND password = $2`, "email", "pwd")
 	util.Logger.Info("GetAll method started")
 	search = []model.Search{model.Search{ID: 1, Name: "name1", Date: time.Now()},
 		model.Search{ID: 1, Name: "name1", Date: time.Now()},

@@ -6,6 +6,7 @@ import (
 	"seedapi/util"
 	"seedapi/route"
 	"seedapi/model"
+	repo "seedapi/repository"
 	"context"
 	"os"
 	"os/signal"
@@ -35,6 +36,14 @@ func main() {
 	// Need to close it at the end.
 	defer util.Logger.Sync()
 
+	//Setup DB
+	db := repo.ConnectToDatabase()
+	if(db ==nil){
+		fmt.Errorf("Unalbe to connect to Db")
+		return
+	}
+	defer db.Close()
+
 	//fmt.Println(appsetting.Port)
 	router := route.LoadRouter(appsetting)
 
@@ -58,3 +67,4 @@ func main() {
 		util.Logger.Error(err.Error())
 	}
 }
+
