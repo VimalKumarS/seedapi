@@ -5,6 +5,7 @@ type AppSetting struct {
 	Port       string  `json:"port"`
 	Env        string  `json:"env"`
 	Connection string  `json:"dbConnection"`
+	DriverName string `json:"driverName"`
 	EnableCors bool    `json:"enablecors"`
 	Logging    Logging `json:"logging"`
 }

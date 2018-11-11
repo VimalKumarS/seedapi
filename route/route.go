@@ -6,7 +6,6 @@ import (
 	"github.com/gorilla/mux"
 	"seedapi/middleware"
 	"seedapi/model"
-	
 )
 
 // Routes list of route
@@ -40,8 +39,8 @@ func LoadRouter(config *model.AppSetting) *mux.Router {
 		if route.Protected {
 			//Todo: chain the middle ware
 			handler = middleware.PanicRecoveryMiddleware(
-										(middleware.TokenMiddleware(
-											middleware.ErrorHandlerMiddleware(route.HandlerFunc))))
+				middleware.GZipMiddleware(	
+						middleware.TokenMiddleware(middleware.ErrorHandlerMiddleware(route.HandlerFunc))))
 
 			//Chain(route.HandlerFunc,middleware.TokenMiddleware,middleware.PanicRecoveryMiddleware)
 		}else{

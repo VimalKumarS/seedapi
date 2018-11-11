@@ -2,6 +2,7 @@
     "port":"0.0.0.0:8000",
     "env":"",
     "dbConnection":"connection string",
+    "driverName":"mysql",
     "enablecors":true,
     "logging":{
         "filepath":".\\api-log\\api.log",

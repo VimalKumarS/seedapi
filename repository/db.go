@@ -3,6 +3,7 @@ package repository
 import (
 	"database/sql"
 	"fmt"
+	"seedapi/model"
 	"seedapi/util"
 )
 
@@ -38,8 +39,8 @@ func setDatabase(database *sql.DB) {
 	Data = &sqlDB{database}
 }
 
-func ConnectToDatabase() *sql.DB {
-	db, err := sql.Open("mysql", "connectionstring")
+func ConnectToDatabase(config *model.AppSetting) *sql.DB {
+	db, err := sql.Open(config.DriverName, config.Connection)
 	if err != nil {
 		util.Logger.Fatal(fmt.Sprintf("Unable to connect to database: %v", err))
 		return nil

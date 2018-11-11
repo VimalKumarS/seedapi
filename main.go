@@ -37,7 +37,7 @@ func main() {
 	defer util.Logger.Sync()
 
 	//Setup DB
-	db := repo.ConnectToDatabase()
+	db := repo.ConnectToDatabase(appsetting)
 	if(db ==nil){
 		fmt.Errorf("Unalbe to connect to Db")
 		return

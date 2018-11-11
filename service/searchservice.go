@@ -32,3 +32,13 @@ func (m *SearchMapperSQL) GetAll() ([]model.Search, error) {
 
 	return search, nil
 }
+
+
+func Add(nums ...int) int {
+	var result int
+	for _, i := range nums {
+		result += i
+	}
+
+	return result
+}
